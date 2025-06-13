@@ -1,10 +1,10 @@
-
 import React from 'react';
 import Navbar from '../components/Navbar';
 import Sidebar from '../components/Sidebar';
 
 const records = [
   {
+    householdId: 'HH-001', // Added Household ID
     name: 'Jerry The Mouse',
     id: '000-1111-222-33',
     age: 23,
@@ -13,6 +13,7 @@ const records = [
     doc: 'Brgy Clearance',
   },
   {
+    householdId: 'HH-002',
     name: 'Jerry The Mouse',
     id: '000-1111-222-33',
     age: 23,
@@ -21,6 +22,7 @@ const records = [
     doc: 'Brgy Clearance',
   },
   {
+    householdId: 'HH-003',
     name: 'Jerry The Mouse',
     id: '000-1111-222-33',
     age: 23,
@@ -29,6 +31,7 @@ const records = [
     doc: 'Cedula',
   },
   {
+    householdId: 'HH-004',
     name: 'Jerry The Mouse',
     id: '000-1111-222-33',
     age: 23,
@@ -54,20 +57,21 @@ const HouseholdRecords = () => {
               <button className="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600">
                 + Add Member
               </button>
-            <div className="flex items-center gap-2">
-              <input
-                type="text"
-                placeholder="Search"
-                className="px-3 py-2 border rounded focus:outline-none"
-              />
-              <button className="bg-gray-300 px-4 py-2 rounded hover:bg-gray-400">Search</button>
+              <div className="flex items-center gap-2">
+                <input
+                  type="text"
+                  placeholder="Search"
+                  className="px-3 py-2 border rounded focus:outline-none"
+                />
+                <button className="bg-gray-300 px-4 py-2 rounded hover:bg-gray-400">Search</button>
+              </div>
             </div>
           </div>
-        </div>
 
           <table className="min-w-full text-sm text-left">
             <thead className="bg-lime-300 text-black text-xs uppercase">
               <tr>
+                <th className="px-4 py-3 font-semibold">Household ID</th> {/* Added column */}
                 <th className="px-4 py-3 font-semibold">Fullname</th>
                 <th className="px-4 py-3 font-semibold">National ID</th>
                 <th className="px-4 py-3 font-semibold">Age</th>
@@ -80,6 +84,7 @@ const HouseholdRecords = () => {
             <tbody className="divide-y divide-gray-200 bg-lime-100">
               {records.map((item, index) => (
                 <tr key={index}>
+                  <td className="px-4 py-3 font-medium">{item.householdId}</td> {/* Display Household ID */}
                   <td className="px-4 py-3">{item.name}</td>
                   <td className="px-4 py-3">{item.id}</td>
                   <td className="px-4 py-3">{item.age}</td>

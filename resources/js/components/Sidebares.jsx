@@ -5,12 +5,12 @@ const Sidebares = () => {
   const location = useLocation();
 
   const menuItems = [
-    { title: "Dashboard", icon: "fa-chart-pie", path: "/residents/dashboard" },
-    { title: "Projects", icon: "fa-diagram-project", path: "/residents/projects" },
-    { title: "Request Documents", icon: "fa-file-alt", path: "/residents/requestDocuments" },
-    { title: "Request Assets", icon: "fa-box-open", path: "/residents/requestAssets" },
-    { title: "Blotter Appointment", icon: "fa-calendar-check", path: "/residents/blotterAppointment" },
-    { title: "Organizational Chart", icon: "fa-sitemap", path: "/residents/organizationalChart" },
+    { title: "Dashboard", icon: "fa-chart-line", path: "/residents/dashboard" },
+    { title: "Projects", icon: "fa-lightbulb", path: "/residents/projects" },
+    { title: "Request Documents", icon: "fa-file-signature", path: "/residents/requestDocuments" },
+    { title: "Request Assets", icon: "fa-dolly", path: "/residents/requestAssets" },
+    { title: "Blotter Appointment", icon: "fa-calendar-days", path: "/residents/blotterAppointment" },
+    { title: "Organizational Chart", icon: "fa-network-wired", path: "/residents/organizationalChart" },
   ];
 
   return (
@@ -19,7 +19,7 @@ const Sidebares = () => {
         
         {/* Logo or Brand Title */}
         <div className="flex items-center justify-center gap-3">
-          <i className="fa-solid fa-house-user text-3xl text-lime-300"></i>
+          <i className="fa-solid fa-user-house text-3xl text-lime-300"></i>
           <h2 className="text-2xl font-extrabold tracking-wide text-lime-100">Resident Panel</h2>
         </div>
 

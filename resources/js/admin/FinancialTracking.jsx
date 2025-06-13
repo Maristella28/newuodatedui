@@ -34,7 +34,7 @@ const FinancialTracking = () => {
 
         {/* Top Bar */}
         <div className="flex justify-between items-center mb-6">
-          <button className="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600">
+          <button className="bg-green-500 text-white px-5 py-2 rounded hover:bg-green-600">
             + Add Transaction
           </button>
 
@@ -42,7 +42,7 @@ const FinancialTracking = () => {
             <select
               value={monthFilter}
               onChange={(e) => setMonthFilter(e.target.value)}
-              className="border px-3 py-2 rounded text-sm"
+              className="border px-10 py-2 rounded text-sm"
             >
               <option value="All">All Months</option>
               <option value="01">January</option>
@@ -62,7 +62,7 @@ const FinancialTracking = () => {
             <select
               value={yearFilter}
               onChange={(e) => setYearFilter(e.target.value)}
-              className="border px-3 py-2 rounded text-sm"
+              className="border px-10 py-2 rounded text-sm"
             >
               <option value="2025">2025</option>
               <option value="2024">2024</option>

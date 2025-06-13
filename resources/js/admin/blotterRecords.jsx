@@ -8,21 +8,21 @@ const BlotterRecords = () => {
 
   const blotterData = [
     {
-      id: 1,
+      residentId: 'RES-001', 
       residentName: 'Juan Dela Cruz',
       dateTime: 'June 10, 2025 - 10:00 AM',
       complaint: 'Noise Complaint',
       status: 'Scheduled',
     },
     {
-      id: 2,
+      residentId: 'RES-002', 
       residentName: 'Maria Clara',
       dateTime: 'June 11, 2025 - 2:00 PM',
       complaint: 'Property Damage',
       status: 'Pending',
     },
     {
-      id: 3,
+      residentId: 'RES-003',
       residentName: 'Jose Rizal',
       dateTime: 'June 12, 2025 - 9:00 AM',
       complaint: 'Threats',
@@ -37,7 +37,7 @@ const BlotterRecords = () => {
       <main className="bg-white min-h-screen ml-64 pt-20 p-8 font-sans">
         <h1 className="text-2xl font-bold mb-8 text-gray-800">Blotter Scheduling Record</h1>
 
-        {/* Top Bar - same style as HouseholdRecords */}
+        {/* Top Bar */}
         <div className="shadow-lg border rounded-lg overflow-hidden mb-6">
           <div className="flex justify-between items-center p-4 border-b">
             <h2 className="text-xl font-semibold">List of Blotter Scheduling</h2>
@@ -70,7 +70,7 @@ const BlotterRecords = () => {
           <table className="min-w-full text-sm text-left">
             <thead className="bg-lime-300 text-black text-xs uppercase">
               <tr>
-                <th className="px-4 py-3 font-semibold">#</th>
+                <th className="px-4 py-3 font-semibold">Resident ID</th> {/* Added column */}
                 <th className="px-4 py-3 font-semibold">Resident Name</th>
                 <th className="px-4 py-3 font-semibold">Date & Time</th>
                 <th className="px-4 py-3 font-semibold">Complaint Summary</th>
@@ -86,7 +86,7 @@ const BlotterRecords = () => {
                 )
                 .map((item, index) => (
                   <tr key={item.id}>
-                    <td className="px-4 py-3">{index + 1}</td>
+                    <td className="px-4 py-3 font-medium">{item.residentId}</td> {/* Display Resident ID */}
                     <td className="px-4 py-3">{item.residentName}</td>
                     <td className="px-4 py-3">{item.dateTime}</td>
                     <td className="px-4 py-3">{item.complaint}</td>

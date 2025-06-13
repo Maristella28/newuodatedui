@@ -6,7 +6,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-
+// Residents Auth Views
 Route::get('/residents/login', function () {
     return view('user.residents.login.login');
 })->name('residents.login');
@@ -15,6 +15,7 @@ Route::get('/residents/register', function () {
     return view('user.residents.login.register');
 })->name('residents.register');
 
+// Residents Pages
 Route::get('/residents/dashboard', function () {
     return view('residents.dashboard');
 })->name('residents.dashboard');
@@ -39,57 +40,61 @@ Route::get('/residents/organizationalChart', function () {
     return view('residents.organizationalChart');
 })->name('residents.organizationalChart');
 
+// ✅ NEW Route for statusAssetRequests (React)
+Route::get('/residents/statusassetrequests', function () {
+    return view('app'); // This should be the Blade file that mounts your React app
+})->name('residents.statusassetrequests');
 
-
-// ADMIN SIDE
+// Admin Pages
 Route::get('/admin/AdminDashboard', function () {
-    return view('/admin/AdminDashboard');  // This should match your blade filename without extension
+    return view('/admin/AdminDashboard');
 })->name('admin.AdminDashboard');
 
 Route::get('/admin/documentsRecords', function () {
-    return view('/admin/documentsRecords');  // This should match your blade filename without extension
+    return view('/admin/documentsRecords');
 })->name('admin.records');
 
 Route::get('/admin/residentsRecords', function () {
-    return view('/admin/residentsRecords');  // This should match your blade filename without extension
+    return view('/admin/residentsRecords');
 })->name('admin.residentsRecords');
 
 Route::get('/admin/householdRecords', function () {
-    return view('/admin/householdRecords');  // This should match your blade filename without extension
+    return view('/admin/householdRecords');
 })->name('admin.householdRecords');
 
 Route::get('/admin/blotterRecords', function () {
-    return view('/admin/blotterRecords');  // This should match your blade filename without extension
+    return view('/admin/blotterRecords');
 })->name('admin.blotterRecords');
 
 Route::get('/admin/financialTracking', function () {
-    return view('/admin/financialTracking');  // This should match your blade filename without extension
+    return view('/admin/financialTracking');
 })->name('admin.financialTracking');
 
 Route::get('/admin/barangayOfficials', function () {
-    return view('/admin/barangayOfficials');  // This should match your blade filename without extension
+    return view('/admin/barangayOfficials');
 })->name('admin.barangayOfficials');
 
 Route::get('/admin/communicationAnnouncement', function () {
-    return view('/admin/communicationAnnouncement');  // This should match your blade filename without extension
+    return view('/admin/communicationAnnouncement');
 })->name('admin.communicationAnnouncement');
 
 Route::get('/admin/disasterEmergency', function () {
-    return view('/admin/disasterEmergency');  // This should match your blade filename without extension
+    return view('/admin/disasterEmergency');
 })->name('admin.disasterEmergency');
 
 Route::get('/admin/inventoryAssets', function () {
-    return view('/admin/inventoryAssets');  // This should match your blade filename without extension
+    return view('/admin/inventoryAssets');
 })->name('admin.inventoryAssets');
 
 Route::get('/admin/projectManagement', function () {
-    return view('/admin/projectManagement');  // This should match your blade filename without extension
+    return view('/admin/projectManagement');
 })->name('admin.projectManagement');
 
 Route::get('/admin/socialServices', function () {
-    return view('/admin/socialServices');  // This should match your blade filename without extension
+    return view('/admin/socialServices');
 })->name('admin.socialServices');
 
+// React fallback route
 Route::get('/{any}', function () {
-    return view('app'); // or whatever blade file mounts React
+    return view('app'); // Blade that mounts your React app
 })->where('any', '.*');

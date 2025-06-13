@@ -1,22 +1,24 @@
 import React from 'react';
 import { Link, useLocation } from "react-router-dom";
+import '@fortawesome/fontawesome-free/css/all.min.css';
+
 
 const Sidebar = () => {
   const location = useLocation();
 
   const menuItems = [
-    { title: "Dashboard", icon: "fa-chart-pie", path: "/admin/AdminDashboard" },
-    { title: "Residents Records", icon: "fa-users", path: "/admin/residentsRecords" },
-    { title: "Document Records", icon: "fa-file-alt", path: "/admin/documentsRecords" },
-    { title: "Household Records", icon: "fa-house", path: "/admin/householdRecords" },
-    { title: "Blotter Scheduling Records", icon: "fa-house", path: "/admin/blotterRecords" },
-    { title: "Financial Tracking", icon: "fa-money-bill-trend-up", path: "/admin/financialTracking" },
-    { title: "Barangay Official & Staff", icon: "fa-user-tie", path: "/admin/barangayOfficials" },
-    { title: "Communication & Announcement", icon: "fa-bullhorn", path: "/admin/communicationAnnouncement" },
-    { title: "Social Services", icon: "fa-hands-helping", path: "/admin/socialServices" },
-    { title: "Disaster & Emergency", icon: "fa-triangle-exclamation", path: "/admin/disasterEmergency" },
+    { title: "Dashboard", icon: "fa-chart-line", path: "/admin/AdminDashboard" },
+    { title: "Residents Records", icon: "fa-id-card", path: "/admin/residentsRecords" },
+    { title: "Document Records", icon: "fa-file-lines", path: "/admin/documentsRecords" },
+    { title: "Household Records", icon: "fa-house-user", path: "/admin/householdRecords" },
+    { title: "Blotter Scheduling", icon: "fa-calendar-check", path: "/admin/blotterRecords" },
+    { title: "Financial Tracking", icon: "fa-peso-sign", path: "/admin/financialTracking" },
+    { title: "Officials & Staff", icon: "fa-people-group", path: "/admin/barangayOfficials" },
+    { title: "Announcements", icon: "fa-bullhorn", path: "/admin/communicationAnnouncement" },
+    { title: "Social Services", icon: "fa-hand-holding-heart", path: "/admin/socialServices" },
+    { title: "Disaster & Emergency", icon: "fa-house-fire", path: "/admin/disasterEmergency" },
     { title: "Project Management", icon: "fa-diagram-project", path: "/admin/projectManagement" },
-    { title: "Inventory Assets", icon: "fa-boxes-stacked", path: "/admin/inventoryAssets" },
+    { title: "Inventory Assets", icon: "fa-boxes-packing", path: "/admin/inventoryAssets" },
   ];
 
   return (
@@ -55,7 +57,7 @@ const Sidebar = () => {
           </ul>
         </nav>
 
-        {/* Footer or User Info Placeholder */}
+        {/* Footer */}
         <div className="text-sm text-green-300 text-center pt-6 border-t border-green-700">
           <p>&copy; 2025 Barangay System</p>
         </div>

@@ -30,6 +30,7 @@ import OrganizationalChart from './residents/OrganizationalChart';
 import Projects from './residents/Projects';
 import RequestAssets from './residents/RequestAssets';
 import RequestDocuments from './residents/RequestDocuments';
+import StatusAssetRequests from './residents/statusassetRequests'; // ✅ NEW PAGE
 
 const container = document.getElementById('app');
 const root = createRoot(container);
@@ -40,7 +41,7 @@ root.render(
       <Routes>
         {/* Admin Section */}
         <Route path="/admin" element={<AdminLayout />}>
-          <Route path="AdminDashboard" element={<AdminDashboard />} />
+          <Route path="adminDashboard" element={<AdminDashboard />} />
           <Route path="documentsRecords" element={<DocumentsRecords />} />
           <Route path="residentsRecords" element={<ResidentsRecords />} />
           <Route path="householdRecords" element={<HouseholdRecords />} />
@@ -62,6 +63,7 @@ root.render(
           <Route path="projects" element={<Projects />} />
           <Route path="requestAssets" element={<RequestAssets />} />
           <Route path="requestDocuments" element={<RequestDocuments />} />
+          <Route path="statusassetrequests" element={<StatusAssetRequests />} /> {/* ✅ NEW ROUTE */}
         </Route>
       </Routes>
     </ErrorBoundary>

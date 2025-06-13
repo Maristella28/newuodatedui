@@ -4,6 +4,7 @@ import Sidebar from '../components/Sidebar';
 
 const records = [
   {
+    residentId: 'RES-001', // Added Resident ID
     name: 'Jerry The Mouse',
     id: '000-1111-222-33',
     age: 23,
@@ -12,6 +13,7 @@ const records = [
     doc: 'Brgy Clearance',
   },
   {
+    residentId: 'RES-002',
     name: 'Jerry The Mouse',
     id: '000-1111-222-33',
     age: 23,
@@ -20,6 +22,7 @@ const records = [
     doc: 'Brgy Clearance',
   },
   {
+    residentId: 'RES-003',
     name: 'Jerry The Mouse',
     id: '000-1111-222-33',
     age: 23,
@@ -28,6 +31,7 @@ const records = [
     doc: 'Cedula',
   },
   {
+    residentId: 'RES-004',
     name: 'Jerry The Mouse',
     id: '000-1111-222-33',
     age: 23,
@@ -43,7 +47,7 @@ const DocumentsRecords = () => {
       <Navbar />
       <Sidebar />
       <main className="bg-white min-h-screen ml-64 pt-20 p-8 font-sans">
-        <h1 className="text-2xl font-bold mb-8 text-gray-800">& Certificates Records</h1>
+        <h1 className="text-2xl font-bold mb-8 text-gray-800">Documents & Certificates Records</h1>
 
         {/* Buttons */}
         <div className="flex justify-center gap-4 mb-8">
@@ -78,6 +82,7 @@ const DocumentsRecords = () => {
           <table className="min-w-full text-sm text-left">
             <thead className="bg-lime-300 text-black text-xs uppercase">
               <tr>
+                <th className="px-4 py-3 font-semibold">Resident ID</th>
                 <th className="px-4 py-3 font-semibold">Fullname</th>
                 <th className="px-4 py-3 font-semibold">National ID</th>
                 <th className="px-4 py-3 font-semibold">Age</th>
@@ -90,6 +95,7 @@ const DocumentsRecords = () => {
             <tbody className="divide-y divide-gray-200 bg-lime-100">
               {records.map((item, index) => (
                 <tr key={index}>
+                  <td className="px-4 py-3 font-medium">{item.residentId}</td> 
                   <td className="px-4 py-3">{item.name}</td>
                   <td className="px-4 py-3">{item.id}</td>
                   <td className="px-4 py-3">{item.age}</td>
