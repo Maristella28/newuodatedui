@@ -7,7 +7,8 @@
     <title>@yield('title', 'Document')</title>
 
     {{-- Load Vite compiled assets --}}
-    @vite(['resources/css/app.css', 'resources/js/app.jsx'])
+  @vite(['resources/css/app.css', 'resources/js/app.js'])
+
 </head>
 <body>
     <div id="app"></div> <!-- React mounts here -->

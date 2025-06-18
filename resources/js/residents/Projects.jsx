@@ -1,8 +1,11 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import Navbares from '../components/Navbares';
 import Sidebares from '../components/Sidebares';
 
 const Project = () => {
+  const navigate = useNavigate(); // used to programmatically navigate
+
   return (
     <>
       <Navbares />
@@ -57,7 +60,10 @@ const Project = () => {
 
             {/* Feedback Button */}
             <div className="flex justify-center">
-              <button className="bg-green-500 hover:bg-green-600 text-white font-semibold py-3 px-8 rounded-full text-lg shadow-lg transition-all duration-300 flex items-center gap-2">
+              <button
+                onClick={() => navigate('/residents/addfeedback')}
+                className="bg-green-500 hover:bg-green-600 text-white font-semibold py-3 px-8 rounded-full text-lg shadow-lg transition-all duration-300 flex items-center gap-2"
+              >
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 animate-pulse" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M7 8h10M7 12h4m-2 8c-4.418 0-8-1.79-8-4V5a2 2 0 012-2h16a2 2 0 012 2v11c0 2.21-3.582 4-8 4h-2z" />
                 </svg>

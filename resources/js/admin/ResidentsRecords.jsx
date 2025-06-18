@@ -1,71 +1,59 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import Navbar from '../components/Navbar';
 import Sidebar from '../components/Sidebar';
 
-const residents = [
-  {
-    residentID: 'RES-001',
-    fullname: 'Jerry The Mouse',
-    nationalID: '000-1111-222-33',
-    age: 23,
-    civilStatus: 'Single',
-    gender: 'Male',
-    voterStatus: 'Yes',
-  },
-  {
-    residentID: 'RES-002',
-    fullname: 'Jerry The Mouse',
-    nationalID: '000-1111-222-33',
-    age: 23,
-    civilStatus: 'Single',
-    gender: 'Male',
-    voterStatus: 'Yes',
-  },
-  {
-    residentID: 'RES-003',
-    fullname: 'Jerry The Mouse',
-    nationalID: '000-1111-222-33',
-    age: 23,
-    civilStatus: 'Single',
-    gender: 'Male',
-    voterStatus: 'Yes',
-  },
-  {
-    residentID: 'RES-004',
-    fullname: 'Jerry The Mouse',
-    nationalID: '000-1111-222-33',
-    age: 23,
-    civilStatus: 'Single',
-    gender: 'Male',
-    voterStatus: 'Yes',
-  },
-];
-
 const ResidentsRecords = () => {
+  const [residents, setResidents] = useState([
+    {
+      residentID: 'RES-001',
+      fullname: 'Jerry The Mouse',
+      nationalID: '000-1111-222-33',
+      age: 23,
+      civilStatus: 'Single',
+      gender: 'Male',
+      voterStatus: 'Yes',
+    },
+  ]);
+
+  const navigate = useNavigate();
+
   return (
     <>
       <Navbar />
       <Sidebar />
       <main className="bg-white min-h-screen ml-64 pt-20 p-8 font-sans">
         <h1 className="text-2xl font-bold mb-8 text-gray-800">Residents Records</h1>
+
         <div className="shadow-lg border rounded-lg overflow-hidden">
-          <div className="flex justify-between items-center p-4 border-b">
+          {/* Top Controls */}
+          <div className="flex flex-col md:flex-row justify-between items-start md:items-center p-4 border-b gap-4">
             <h2 className="text-xl font-semibold">Resident Records</h2>
-            <div className="flex items-center gap-4">
-              <button className="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600">
+
+            <div className="flex flex-col md:flex-row items-end md:items-center gap-4">
+              {/* Add Resident Button */}
+              <div
+                className="bg-green-100 rounded-xl p-6 shadow-md text-center w-72 hover:shadow-xl hover:-translate-y-1 transition-all cursor-pointer"
+                onClick={() => navigate('/admin/addResident')}
+              >
                 + Add Resident
-              </button>
+              </div>
+
+              {/* Search Field */}
               <div className="flex items-center gap-2">
                 <input
                   type="text"
                   placeholder="Search"
                   className="px-3 py-2 border rounded focus:outline-none"
                 />
-                <button className="bg-gray-300 px-4 py-2 rounded hover:bg-gray-400">Search</button>
+                <button className="bg-gray-300 px-4 py-2 rounded hover:bg-gray-400">
+                  Search
+                </button>
               </div>
             </div>
           </div>
 
+          {/* Residents Table */}
           <table className="min-w-full text-sm text-left">
             <thead className="bg-lime-300 text-black text-xs uppercase">
               <tr>
@@ -90,7 +78,9 @@ const ResidentsRecords = () => {
                   <td className="px-4 py-3">{resident.gender}</td>
                   <td className="px-4 py-3">{resident.voterStatus}</td>
                   <td className="px-4 py-3">
-                    <button className="bg-gray-300 px-3 py-1 rounded hover:bg-gray-400 text-sm">Action ▼</button>
+                    <button className="bg-gray-300 px-3 py-1 rounded hover:bg-gray-400 text-sm">
+                      Action ▼
+                    </button>
                   </td>
                 </tr>
               ))}

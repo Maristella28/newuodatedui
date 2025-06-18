@@ -4,6 +4,7 @@ module.exports = {
     "./resources/**/*.blade.php",
     "./resources/**/*.js",
     "./resources/**/*.vue",
+    "./node_modules/flowbite/**/*.js", // ✅ Add this line for Flowbite
   ],
   theme: {
     extend: {
@@ -16,5 +17,7 @@ module.exports = {
       },
     },
   },
-  plugins: [],
+  plugins: [
+    require('flowbite/plugin') // ✅ Add Flowbite plugin
+  ],
 }

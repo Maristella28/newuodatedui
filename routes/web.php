@@ -20,7 +20,7 @@ Route::get('/residents/dashboard', function () {
     return view('residents.dashboard');
 })->name('residents.dashboard');
 
-Route::get('/residents/document-request', function () {
+Route::get('/residents/documentRequest', function () {
     return view('residents.pages.document-request');
 })->name('residents.document-request');
 
@@ -57,6 +57,10 @@ Route::get('/admin/documentsRecords', function () {
 Route::get('/admin/residentsRecords', function () {
     return view('/admin/residentsRecords');
 })->name('admin.residentsRecords');
+
+Route::get('/admin/addResident', function () {
+    return view('/admin/addResident');
+})->name('admin.addResident');
 
 Route::get('/admin/householdRecords', function () {
     return view('/admin/householdRecords');

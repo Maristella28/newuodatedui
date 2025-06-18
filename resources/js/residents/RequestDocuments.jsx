@@ -1,9 +1,12 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import Navbares from '../components/Navbares';
 import Sidebares from '../components/Sidebares';
-import { FaFileAlt, FaBusinessTime, FaIdBadge } from 'react-icons/fa';
+import { FaFileAlt, FaBusinessTime, FaIdBadge, FaHome } from 'react-icons/fa';
 
 const RequestDocuments = () => {
+  const navigate = useNavigate();
+
   return (
     <>
       <Navbares />
@@ -21,36 +24,41 @@ const RequestDocuments = () => {
 
           {/* Document Cards */}
           <div className="flex flex-wrap justify-center gap-8 mb-12">
-            {/* Card 1 */}
-            <div className="bg-green-100 rounded-xl p-6 shadow-md text-center w-72 hover:shadow-xl hover:-translate-y-1 transition-all cursor-pointer">
+            {/* Barangay Clearance */}
+            <div
+              className="bg-green-100 rounded-xl p-6 shadow-md text-center w-72 hover:shadow-xl hover:-translate-y-1 transition-all cursor-pointer"
+              onClick={() => navigate('/residents/brgyclearance')}
+            >
               <FaFileAlt className="text-green-700 text-5xl mb-4 mx-auto" />
               <p className="font-semibold text-green-900">Barangay Clearance</p>
             </div>
 
-            {/* Card 2 */}
-            <div className="bg-blue-100 rounded-xl p-6 shadow-md text-center w-72 hover:shadow-xl hover:-translate-y-1 transition-all cursor-pointer">
-              <FaBusinessTime className="text-blue-700 text-5xl mb-4 mx-auto" />
-              <p className="font-semibold text-blue-900">Barangay Business Clearance</p>
-            </div>
-
-            {/* Card 3 */}
-            <div className="bg-purple-100 rounded-xl p-6 shadow-md text-center w-72 hover:shadow-xl hover:-translate-y-1 transition-all cursor-pointer">
-              <FaIdBadge className="text-purple-700 text-5xl mb-4 mx-auto" />
-              <p className="font-semibold text-purple-900">Community Tax Certificate (Cedula)</p>
-            </div>
-          </div>
-
-          {/* Dropdown */}
-          <div className="w-full sm:w-1/3 mx-auto">
-            <select
-              className="w-full border border-green-300 rounded-lg p-3 shadow-sm bg-white text-gray-700 focus:outline-none focus:ring-2 focus:ring-green-500"
-              defaultValue=""
+            {/* Business Permit */}
+            <div
+              className="bg-green-100 rounded-xl p-6 shadow-md text-center w-72 hover:shadow-xl hover:-translate-y-1 transition-all cursor-pointer"
+              onClick={() => navigate('/residents/brgybusinesspermit')}
             >
-              <option value="" disabled>Other Types of Document</option>
-              <option>Certificate of Indigency</option>
-              <option>Certificate of Residency</option>
-              <option>Barangay ID</option>
-            </select>
+              <FaBusinessTime className="text-green-700 text-5xl mb-4 mx-auto" />
+              <p className="font-semibold text-green-900">Barangay Business Permit</p>
+            </div>
+
+            {/* Certificate of Indigency */}
+            <div
+              className="bg-green-100 rounded-xl p-6 shadow-md text-center w-72 hover:shadow-xl hover:-translate-y-1 transition-all cursor-pointer"
+              onClick={() => navigate('/residents/brgyindigency')}
+            >
+              <FaIdBadge className="text-green-700 text-5xl mb-4 mx-auto" />
+              <p className="font-semibold text-green-900">Certificate of Indigency</p>
+            </div>
+
+            {/* Certificate of Residency */}
+            <div
+              className="bg-green-100 rounded-xl p-6 shadow-md text-center w-72 hover:shadow-xl hover:-translate-y-1 transition-all cursor-pointer"
+              onClick={() => navigate('/residents/brgyresidency')}
+            >
+              <FaHome className="text-green-700 text-5xl mb-4 mx-auto" />
+              <p className="font-semibold text-green-900">Certificate of Residency</p>
+            </div>
           </div>
         </main>
       </div>
