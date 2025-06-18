@@ -61,7 +61,7 @@ const Project = () => {
             {/* Feedback Button */}
             <div className="flex justify-center">
               <button
-                onClick={() => navigate('/residents/addfeedback')}
+                onClick={() => navigate('/residents/addFeedback')}
                 className="bg-green-500 hover:bg-green-600 text-white font-semibold py-3 px-8 rounded-full text-lg shadow-lg transition-all duration-300 flex items-center gap-2"
               >
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 animate-pulse" fill="none" viewBox="0 0 24 24" stroke="currentColor">

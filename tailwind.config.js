@@ -1,23 +1,15 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
-    "./resources/**/*.blade.php",
-    "./resources/**/*.js",
-    "./resources/**/*.vue",
-    "./node_modules/flowbite/**/*.js", // ✅ Add this line for Flowbite
+    './resources/**/*.blade.php',
+    './resources/**/*.js',
+    './resources/**/*.jsx',
+    './node_modules/flowbite/**/*.js',
   ],
   theme: {
-    extend: {
-      colors: {
-        primary: "#16a34a",
-        secondary: "#facc15",
-      },
-      fontFamily: {
-        sans: ['Poppins', 'sans-serif'],
-      },
-    },
+    extend: {},
   },
   plugins: [
-    require('flowbite/plugin') // ✅ Add Flowbite plugin
+    require('flowbite/plugin')
   ],
-}
+};

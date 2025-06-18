@@ -45,6 +45,27 @@ Route::get('/residents/statusassetrequests', function () {
     return view('app'); // This should be the Blade file that mounts your React app
 })->name('residents.statusassetrequests');
 
+// ✅ Additional React-powered Resident Routes
+Route::get('/residents/addFeedback', function () {
+    return view('app');
+})->name('residents.addFeedback');
+
+Route::get('/residents/brgyBusinessPermit', function () {
+    return view('app');
+})->name('residents.brgyBusinessPermit');
+
+Route::get('/residents/brgyClearance', function () {
+    return view('app');
+})->name('residents.brgyClearance');
+
+Route::get('/residents/brgyIndigency', function () {
+    return view('app');
+})->name('residents.brgyIndigency');
+
+Route::get('/residents/brgyResidency', function () {
+    return view('app');
+})->name('residents.brgyResidency');
+
 // Admin Pages
 Route::get('/admin/AdminDashboard', function () {
     return view('/admin/AdminDashboard');

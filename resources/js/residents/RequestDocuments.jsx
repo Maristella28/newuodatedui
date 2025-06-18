@@ -27,7 +27,7 @@ const RequestDocuments = () => {
             {/* Barangay Clearance */}
             <div
               className="bg-green-100 rounded-xl p-6 shadow-md text-center w-72 hover:shadow-xl hover:-translate-y-1 transition-all cursor-pointer"
-              onClick={() => navigate('/residents/brgyclearance')}
+              onClick={() => navigate('/residents/brgyClearance')}
             >
               <FaFileAlt className="text-green-700 text-5xl mb-4 mx-auto" />
               <p className="font-semibold text-green-900">Barangay Clearance</p>
@@ -36,7 +36,7 @@ const RequestDocuments = () => {
             {/* Business Permit */}
             <div
               className="bg-green-100 rounded-xl p-6 shadow-md text-center w-72 hover:shadow-xl hover:-translate-y-1 transition-all cursor-pointer"
-              onClick={() => navigate('/residents/brgybusinesspermit')}
+              onClick={() => navigate('/residents/brgyBusinessPermit')}
             >
               <FaBusinessTime className="text-green-700 text-5xl mb-4 mx-auto" />
               <p className="font-semibold text-green-900">Barangay Business Permit</p>
@@ -45,7 +45,7 @@ const RequestDocuments = () => {
             {/* Certificate of Indigency */}
             <div
               className="bg-green-100 rounded-xl p-6 shadow-md text-center w-72 hover:shadow-xl hover:-translate-y-1 transition-all cursor-pointer"
-              onClick={() => navigate('/residents/brgyindigency')}
+              onClick={() => navigate('/residents/brgyIndigency')}
             >
               <FaIdBadge className="text-green-700 text-5xl mb-4 mx-auto" />
               <p className="font-semibold text-green-900">Certificate of Indigency</p>
@@ -54,7 +54,7 @@ const RequestDocuments = () => {
             {/* Certificate of Residency */}
             <div
               className="bg-green-100 rounded-xl p-6 shadow-md text-center w-72 hover:shadow-xl hover:-translate-y-1 transition-all cursor-pointer"
-              onClick={() => navigate('/residents/brgyresidency')}
+              onClick={() => navigate('/residents/brgyResidency')}
             >
               <FaHome className="text-green-700 text-5xl mb-4 mx-auto" />
               <p className="font-semibold text-green-900">Certificate of Residency</p>
